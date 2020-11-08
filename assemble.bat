@@ -1,0 +1,1 @@
+npm run build && nativefier https://teams.microsoft.com/_?tenantID=ae65f568-0ceb-42c2-9dda-731b9c16e6b4 --name "sTeams" --internal-urls .*

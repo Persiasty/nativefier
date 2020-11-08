@@ -81,6 +81,7 @@ export function createMainWindow(
   nativefierOptions,
   onAppQuit,
   setDockBadge,
+  partition: string = "main"
 ): BrowserWindow {
   const options = { ...nativefierOptions };
   const mainWindowState = windowStateKeeper({
@@ -99,6 +100,7 @@ export function createMainWindow(
       webSecurity: !options.insecure,
       preload: path.join(__dirname, 'preload.js'),
       zoomFactor: options.zoom,
+      partition: partition
     },
   };
 
